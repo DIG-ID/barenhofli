@@ -1,0 +1,102 @@
+.block-sidebar
+  display: flex
+  flex-direction: column
+  min-height: 300px
+  padding: 23px 30px 30px 30px
+  margin-bottom: 30px
+  background-color: #fff
+  position: relative
+  &__title
+    font-family: $title-font
+    font-size: 22px
+    font-weight: normal
+    line-height: 27px
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    color: #000
+    hyphens: auto
+    -webkit-font-smoothing: antialiased
+    margin-bottom: 10px
+  &__text
+    flex-grow: 2
+    color: #000
+    margin: 0
+    padding: 0
+    font-family: $primary-font
+    line-height: 20px
+    font-size: 13.6px
+    letter-spacing: 0.05em
+    hyphens: auto
+    -webkit-font-smoothing: antialiased
+    a
+      text-decoration: none
+      color: #000
+  &__btn
+    display: block
+    width: 100%
+    padding: 4px 0px
+    border: 1px solid $primary-color
+    font-family: $primary-font
+    font-size: 13.6px
+    line-height: 20px
+    letter-spacing: 0.075em
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    color: $primary-color
+    transition: all .4s ease-in-out
+    &:hover
+      background-color: $primary-color
+      color: #fff
+  &__badge
+    border-radius: 50%
+    width: 78px
+    height: 78px
+    background-color: #e7315b
+    position: absolute
+    right: 4px
+    top: -27px
+    z-index: 3
+    padding: 21px 6px
+    text-align: center
+    vertical-align: middle
+    font-family: $primary-font
+    font-size: 12px
+    line-height: 17px
+    letter-spacing: 0.075em
+    color: #FFF
+    font-weight: 400
+    text-transform: uppercase
+    transform: rotate(20deg)
+    -webkit-font-smoothing: antialiased
+  &--inverted
+    background-color: $primary-color
+    .block-sidebar__title
+      color: #fff
+    .block-sidebar__text
+      color: #fff
+      a
+        color: #fff
+    .block-sidebar__btn
+      border-color: #fff
+      color: #fff
+      &:hover
+        background-color: #fff
+        color: $primary-color
+  &--technical-equipment
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    span
+      display: block
+      font-weight: 600
+      color: $primary-color
+  &--overviews
+    .block-sidebar__btn
+      &:first-of-type
+        line-height: 16px
+        margin-bottom: 15px
+
+@media (max-width: $lg)
+  .block-sidebar
+    padding: 22px

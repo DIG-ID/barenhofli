@@ -1,0 +1,164 @@
+/*main menu*/
+#wrapper-navbar
+  position: fixed
+  width: 100%
+  z-index: 999
+
+#opener
+  display: none
+  &__menu
+    display: none
+
+.button
+  &__mobile
+    display: none
+
+.navbar
+  padding-left: 60px
+  padding-right: 60px
+  .menu-item
+    margin: 10px 20px
+    display: block
+  .menu-item > a
+    display: block
+    outline: 0
+    font-family: $primary-font
+    text-decoration: none
+    text-transform: uppercase
+    color: #000000
+    font-size: 14px
+    letter-spacing: .075em
+    line-height: 20px
+    font-weight: normal
+    padding: 5px 0px 1px
+    border-bottom: 2px solid transparent
+    -webkit-font-smoothing: antialiased
+    &:hover
+      border-bottom: 2px solid #000
+
+  .current-menu-item a
+    border-bottom-color: #000
+
+.navbar-expand-xl .navbar-collapse
+  justify-content: center
+
+.custom-logo-link
+  padding: 10px 0px
+  img
+    width: 110px
+    height: auto
+
+@media (max-width: $xxl)
+  .navbar
+    .menu-item
+      margin: 10px
+
+@media (max-width: $xl)
+  .button__booking--mobile
+    display: block
+  .menu__container--mobile
+    padding-left: 0px
+    padding-right: 0px
+  .custom-logo-link
+    padding: 20px 0px
+
+  .wpml-ls-legacy-list-horizontal
+    padding: 8px
+    a
+      outline: 0
+      padding: 5px 7px
+      span
+        color: #000
+        font-family: "WalsheimThin"
+        font-size: 13.6px
+        font-weight: 400
+        letter-spacing: 0.1em
+
+  .wpml-ls-current-language
+    span
+      text-decoration: underline
+
+  .navbar
+    .menu-item
+      margin: 0
+      padding: 0px
+      a
+        color: #000
+        font-family: "WalsheimThin"
+        font-size: 13.6px
+        font-weight: 400
+        line-height: 19px
+        letter-spacing: 0.1em
+        padding: 10px 0
+        border-bottom: 1px solid #626262
+        outline: 0
+        &:hover
+          border-bottom: 1px solid #626262
+    &-toggle
+      background-color: $primary-color
+      .icon-bar
+        display: block
+        width: 22px
+        height: 2px
+        margin-top: 4px
+        border-radius: 1px
+        background-color: #fff
+        &:first-child
+          margin-top: 0px
+
+  .main-block
+    &__btn--dark
+      margin-left: 0
+      margin-top: 10px
+
+  .wpml-ls-legacy-dropdown
+    display: none
+
+  .button
+    &__desktop
+      display: none
+    &__mobile
+      display: block
+      width: 100%
+
+  .booking-bar
+    &__container
+      width: 100%
+      padding: 5px 15px
+
+  .lang-switcher-mobile
+    margin-bottom: 25px
+
+  #sb
+    &-container
+      display: none
+    &-container-en
+      display: none
+    &-container-fr
+      display: none
+
+  #opener
+    display: block
+    outline: 0
+    background-color: $primary-color
+    position: relative
+    float: right
+    padding: 10px 13px
+    border: none
+    &__menu
+      min-height: calc(99vh - 60px)
+      margin-top: 20px
+      flex-basis: 100%
+      flex-grow: 1
+      align-items: center
+      background-color: #fff
+
+@media (max-width: $md)
+  .navbar
+    padding: 0px 30px
+
+@media (max-width: $sm)
+  .custom-logo-link
+    padding: 0px
+  .navbar
+    padding: 25px

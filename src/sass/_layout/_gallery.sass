@@ -1,0 +1,19 @@
+.gallery-image-wrapper
+  a
+    display: block
+    min-height: 300px
+    margin-bottom: 30px
+    cursor: zoom-in
+    img
+      width: 100%
+      max-width: 100%
+      min-height: 100%
+      -o-object-fit: cover
+      object-fit: cover
+      padding: 0
+      margin: 0
+
+@media (max-width: $sm)
+  .gallery-image-wrapper
+    a
+      min-height: auto

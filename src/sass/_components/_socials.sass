@@ -1,0 +1,36 @@
+.footer-block
+  &__title
+    display: block
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 10px
+
+.socials-wrapper
+  display: flex
+  justify-content: center
+  .social-link
+    transtion: all .3s ease-in-out
+    margin: 0px 10px
+    border-bottom: 1px solid transparent
+    svg
+      //width: 20px
+      padding: 2px
+      height: 20px
+      fill: #9a9a9a
+      transtion: all .3s ease-in-out
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    &:hover
+      border-bottom: 1px solid #fff
+      svg
+        fill: #fff
+
+
+@media (max-width: $xl)
+  .socials-wrapper
+    justify-content: flex-start
+  .footer-block
+    &__title
+      text-align: left

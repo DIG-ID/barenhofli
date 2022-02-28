@@ -1,0 +1,51 @@
+.button
+  padding: 5px 0
+  font-family: $primary-font
+  font-size: 13.6px
+  letter-spacing: .1em
+  font-weight: 400
+  text-transform: uppercase
+  transition: all .4s ease-in-out
+  -webkit-font-smoothing: antialiased
+  &__blue
+    color: #ffffff
+    background-color: $primary-color
+    border: 1px solid $primary-color
+    &:hover
+      background-color: #fff
+      color: $primary-color
+  &__white
+    color: $primary-color
+    background-color: #ffffff
+    border: 1px solid $primary-color
+    &:hover
+      background-color: $primary-color
+      color: #fff
+  &__booking
+    padding: 5px 30px
+    line-height: 23px
+    border: 1px solid $primary-color
+    font-size: 12px
+    display: block
+    text-decoration: none
+    &--mobile
+      position: absolute
+      bottom: 0px
+      z-index: 4
+      text-align: center
+      width: 100%
+  &__tel--wrapper
+    a
+      text-transform: none
+  &__email--wrapper
+    a
+      text-transform: none
+  &__booking--wrapper
+    .main-block__btn--dark
+      margin-left: 0px
+    button
+      padding: 8px 0
+
+@media (min-width: $xl)
+  .button__booking--mobile
+    display: none

@@ -1,0 +1,55 @@
+#footer-wrapper
+  background: $primary-color
+  padding: 3% 0
+  .footer-block
+    color: #fff
+    font-size: 14px
+    line-height: 21px
+    letter-spacing: 0.075em
+    font-family: $primary-font
+    margin-bottom: 40px
+    img
+      width: 127px
+    a
+      text-decoration: none
+      color: #fff
+      background: transparent
+      transition: all .2s ease-in-out
+      &:hover
+        text-decoration: underline
+  .back-to-top
+    display: block
+    width: 22px
+    margin: 0 auto
+    &:hover
+      opacity: .5
+
+  .footer-contact-number
+    display: block
+    //height: 30px
+    padding: 6.5px 20px
+    font-family: $primary-font
+    font-size: 13.6px
+    text-align: center
+    text-decoration: none
+    line-height: 20px
+    letter-spacing: 0.075em
+    vertical-align: middle
+    color: #fff
+    border: 1px solid #fff
+    cursor: pointer
+
+@media (max-width: $xl)
+  #footer-wrapper
+    .footer-block
+      &__title
+        text-align: left
+
+@media (max-width: $lg)
+  #footer-wrapper
+    padding: 30px 15px 23px 15px
+    .footer-block
+      margin-bottom: 20px
+      text-align: center
+      &:first-child
+        display: none

@@ -1,0 +1,39 @@
+{
+  "name": "barenhofli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production",
+    "build": "npm run production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIG-ID/barenhofli.git"
+  },
+  "author": "dig.id",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DIG-ID/barenhofli/issues"
+  },
+  "homepage": "https://github.com/DIG-ID/barenhofli#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "jquery": "^3.6.0",
+    "laravel-mix": "^6.0.42",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.25",
+    "bootstrap": "^5.1.3",
+    "swiper": "^8.0.6"
+  }
+}

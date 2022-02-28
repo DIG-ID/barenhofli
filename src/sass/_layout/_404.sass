@@ -1,0 +1,59 @@
+.not-found
+  display: flex
+  justify-content: center
+  align-content: center
+  align-items: center
+
+  &__title
+    min-height: 600px
+    min-width: 255px
+    background: transparent url('../../images/404back.png') no-repeat center center
+    padding-top: 320px
+    text-align: center
+    h1
+      font-family: $primary-font
+      font-size: 104px
+      font-weight: 700
+      text-transform: uppercase
+      line-height: 100px
+      color: #fff
+      span
+        font-size: 60px
+
+  &__content
+    margin-left: 60px
+    p
+      color: $primary-color
+      text-transform: uppercase
+  &__subtitle
+    font-family: $primary-font
+    //font-weight: 900
+    font-size: 36px
+    line-height: 45px
+    letter-spacing: 1px
+    
+  &__description
+    font-family: $primary-font
+    font-size: 20px
+    letter-spacing: 2px
+    line-height: 30px
+    margin-bottom: 20px
+
+  &__back-to-home
+    display: block
+    width: 100%
+    padding: 4px 0px
+    border: 1px solid $primary-color
+    font-family: $primary-font
+    font-size: 13.6px
+    line-height: 20px
+    letter-spacing: 0.075em
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    color: #fff
+    background-color: $primary-color
+    transition: all .4s ease-in-out
+    &:hover
+      background-color: transparent
+      color: $primary-color
