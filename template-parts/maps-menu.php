@@ -11,8 +11,8 @@
    max-width: inherit !important;
 }
 </style>
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0"></script>
-<script async type="text/javascript">
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0"></script>
+<script defer type="text/javascript">
 (function( $ ) {
 
 /**
