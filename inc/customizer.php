@@ -16,13 +16,13 @@ function barenhofli_theme_customizer_register( $wp_customize ) {
 			'priority'       => 20,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
-			'title'          => __( 'Kongresszentrum Kreuz Theme Options', 'barenhofli' ),
-			'description'    => __( 'Theme options for the Kongresszentrum Kreuz Theme', 'barenhofli' ),
+			'title'          => __( 'Bärenhöfli Theme Options', 'barenhofli' ),
+			'description'    => __( 'Theme options for the Bärenhöfli Theme', 'barenhofli' ),
 		)
 	);
 
 	require get_parent_theme_file_path( '/inc/customizer/footer.php' );
-	//require get_parent_theme_file_path( '/inc/customizer/socials.php' );
+	require get_parent_theme_file_path( '/inc/customizer/socials.php' );
 
 }
 add_action( 'customize_register', 'barenhofli_theme_customizer_register' );

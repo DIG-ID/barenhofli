@@ -51,14 +51,14 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new WP_Customize_Media_Control(
+	new WP_Customize_Control(
 		$wp_customize,
 		'block-1',
 		array(
 			'label'       => __( 'Block 1', 'barenhofli' ),
 			'description' => '',
 			'section'     => 'footer_section',
-			'mime_type'   => 'image',
+			'type'        => 'textarea',
 		)
 	)
 );

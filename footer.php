@@ -2,21 +2,16 @@
 			<div class="container">
 				<div class="row justify-content-between align-items-start">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3 px-15 footer-block">
-						<?php
-						$footer_logo = get_theme_mod( 'block-1' );
-						if ( $footer_logo ) :
-							echo wp_get_attachment_image( $footer_logo, 'full' );
-						endif;
-						?>
+						<?php echo wpautop( wp_kses_post( get_theme_mod( 'block-1' ) ) ); ?>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3 px-15 footer-block">
-						<?php echo wp_kses_post( get_theme_mod( 'block-2' ) ); ?>
+						<?php echo wpautop( wp_kses_post( get_theme_mod( 'block-2' ) ) ); ?>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3 px-15 footer-block">
-						<?php echo wp_kses_post( get_theme_mod( 'block-3' ) ); ?>
+						<?php echo wpautop( wp_kses_post( get_theme_mod( 'block-3' ) ) ); ?>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3 px-15 footer-block">
-						<?php echo wp_kses_post( get_theme_mod( 'block-4' ) ); ?>
+						<?php echo wpautop( wp_kses_post( get_theme_mod( 'block-4' ) ) ); ?>
 					</div>
 				</div><!-- row end -->
 				<div class="row justify-content-center">
@@ -28,7 +23,18 @@
 				</div>
 			</div><!-- container end -->
 		</footer><!-- wrapper end -->
-
+		<div class="footer-map">
+			<?php get_template_part( 'template-parts/maps-menu' ); ?>
+			<section class="google-maps-wrapper">
+				<?php
+					$location = get_field( 'google_map' );
+					if ( $location ) : ?>
+						<div class="acf-map map-contacts" data-zoom="12">
+							<div class="marker" data-lat="<?php echo esc_attr( $location['lat'] ); ?>" data-lng="<?php echo esc_attr( $location['lng'] ); ?>"></div>
+						</div>
+				<?php endif; ?>
+			</section>
+		</div>
 		</div><!-- #page we need this extra closing tag here -->
 		<?php wp_footer(); ?>
 	</body>

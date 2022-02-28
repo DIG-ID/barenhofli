@@ -11961,13 +11961,6 @@ button.swiper-pagination-bullet {
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "navarrowsfont";
-  src: url(./fonts/navarrowsfont.eot?62193df19b3af061081e3cbd52a186a0);
-  src: url(./fonts/navarrowsfont.eot?62193df19b3af061081e3cbd52a186a0#iefix) format("embedded-opentype"), url(./fonts/navarrowsfont.ttf?b5ff9d9e7bc42da2abb55e098f62cfd3) format("truetype"), url(./fonts/navarrowsfont.woff?8b442bbc2f236698aaf58b5d83f420cb) format("woff"), url(./fonts/navarrowsfont.svg?b64b380077c1742f7bf9e3d6034fe923#navarrowsfont) format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -12044,7 +12037,7 @@ body {
 }
 .wpml-ls-legacy-dropdown .wpml-ls-sub-menu {
   margin-top: 30px;
-  background-color: #263A54;
+  background-color: #53524d;
   transition: all 0.3s ease-in-out;
 }
 .wpml-ls-legacy-dropdown .wpml-ls-sub-menu .wpml-ls-item a {
@@ -12054,7 +12047,7 @@ body {
   -webkit-font-smoothing: antialiased;
   padding: 8px 7px;
   margin: 0;
-  background-color: #263A54;
+  background-color: #53524d;
   color: #c8c8c8;
   border: 1px #000 solid;
   inline-size: -webkit-min-content;
@@ -12101,17 +12094,18 @@ body {
 .navbar .menu-item > a {
   display: block;
   outline: 0;
-  font-family: "WalsheimThin", sans-serif;
+  font-family: "TheMixBoldItalic", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
-  font-size: 14px;
-  letter-spacing: 0.075em;
-  line-height: 20px;
-  font-weight: normal;
+  font-size: 14.5px;
+  letter-spacing: 0.04em;
+  line-height: 23px;
+  font-weight: 400;
   padding: 5px 0px 1px;
   border-bottom: 2px solid transparent;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 .navbar .menu-item > a:hover {
   border-bottom: 2px solid #000;
@@ -12128,7 +12122,8 @@ body {
   padding: 10px 0px;
 }
 .custom-logo-link img {
-  width: 110px;
+  width: 100%;
+  max-width: 134px;
   height: auto;
 }
 
@@ -12189,7 +12184,7 @@ body {
     border-bottom: 1px solid #626262;
   }
   .navbar-toggle {
-    background-color: #263A54;
+    background-color: #53524d;
   }
   .navbar-toggle .icon-bar {
     display: block;
@@ -12242,7 +12237,7 @@ body {
   #opener {
     display: block;
     outline: 0;
-    background-color: #263A54;
+    background-color: #53524d;
     position: relative;
     float: right;
     padding: 10px 13px;
@@ -12274,17 +12269,20 @@ body {
 /*homepage*/
 .slider-banner-wrapper {
   background-color: #ffffff;
-  padding: 0px 60px;
+  padding-top: 60px;
 }
 
 .slider-banner-container {
-  max-height: 100vh;
-  min-height: 100vh;
+  max-height: 650px;
+  min-height: 650px;
 }
 
 .slider-banner {
-  max-height: 100vh;
-  min-height: 100vh;
+  max-height: 650px;
+  min-height: 650px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 .slider-banner img {
   width: 100%;
@@ -12292,24 +12290,29 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
+  z-index: 1;
 }
 .slider-banner__badge {
   position: absolute;
-  top: 120px;
-  left: 30px;
+  top: 50px;
+  left: 50px;
   display: block;
   z-index: 3;
+  max-width: 160px;
+  max-height: 160px;
+}
+.slider-banner__badge img {
+  width: 100%;
 }
 .slider-banner__content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  background-color: #fff;
   padding: 30px 0px;
+  margin-bottom: 70px;
+  z-index: 2;
 }
 .slider-banner__inner-content {
   display: flex;
@@ -12318,60 +12321,16 @@ body {
 .slider-banner__title {
   font-family: "TheMixBoldItalic", sans-serif;
   font-weight: 400;
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-size: 58px;
+  letter-spacing: 0px;
   white-space: nowrap;
-  line-height: 40px;
-  text-transform: uppercase;
+  line-height: 72px;
   margin: 0px;
-  margin-right: 200px;
-}
-.slider-banner__info {
-  font-family: "WalsheimThin", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  text-transform: uppercase;
-  line-height: 20px;
-  letter-spacing: 1px;
-  margin: 0px;
-  white-space: nowrap;
-  margin-right: 100px;
-}
-.slider-banner__info span {
-  display: block;
-}
-.slider-banner__description {
-  font-family: "WalsheimThin", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  margin: 0px;
-  white-space: nowrap;
-}
-.slider-banner__btn {
-  display: block;
-  font-family: "WalsheimThin", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 20px;
-  border: 1px solid #000;
-  color: #000;
-  padding: 5px 35px;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  white-space: normal;
 }
 
-@media (max-width: 1400px) {
-  .slider-banner__title {
-    margin-right: 80px;
-  }
-  .slider-banner__info {
-    margin-right: 80px;
-  }
-}
 @media (max-width: 768px) {
   .slider-banner-wrapper {
     padding: 0px 30px;
@@ -12405,82 +12364,8 @@ body {
   padding-top: 60px;
 }
 
-.gallery-image-wrapper a {
-  display: block;
-  min-height: 300px;
-  margin-bottom: 30px;
-  cursor: zoom-in;
-}
-.gallery-image-wrapper a img {
-  width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  padding: 0;
-  margin: 0;
-}
-
-@media (max-width: 576px) {
-  .gallery-image-wrapper a {
-    min-height: auto;
-  }
-}
-.swiper-container-history {
-  height: 630px;
-  padding-bottom: 30px;
-  background-color: #263A54;
-  position: relative;
-  overflow: hidden;
-}
-.swiper-container-history .swiper-pagination {
-  color: #fff;
-  width: 100%;
-}
-.swiper-container-history .swiper-pagination {
-  color: #fff;
-  width: 100%;
-  text-align: center;
-}
-.swiper-container-history .swiper-pagination-bullets {
-  bottom: 0px;
-  padding-right: 20px;
-  padding-bottom: 4px;
-  padding-top: 1px;
-}
-.swiper-container-history .swiper-pagination-bullets .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border: 1px solid #fff;
-  opacity: 1;
-  cursor: pointer;
-  margin: 0 3px;
-}
-.swiper-container-history .swiper-pagination-bullets .swiper-pagination-bullet-active {
-  background-color: #263A54;
-  border: 1px solid #fff;
-}
-
-@media (max-width: 992px) {
-  .page-template-page-history .block-image--slider {
-    min-height: auto;
-  }
-
-  .swiper-container-history {
-    height: auto;
-    padding-bottom: 0px;
-  }
-  .swiper-container-history .swiper-pagination {
-    display: none;
-  }
-}
-.google-maps-wrapper {
-  margin-bottom: 30px;
-}
-
 #footer-wrapper {
-  background: #263A54;
+  background: #53524d;
   padding: 3% 0;
 }
 #footer-wrapper .footer-block {
@@ -12502,6 +12387,30 @@ body {
 }
 #footer-wrapper .footer-block a:hover {
   text-decoration: underline;
+}
+#footer-wrapper .footer-block .button__footer {
+  display: inline-block;
+  border: 1px solid transparent;
+  padding: 7px 20px;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  color: #53524d;
+  background-color: #fff;
+}
+#footer-wrapper .footer-block .button__footer:hover {
+  outline: 0;
+  text-decoration: none;
+}
+#footer-wrapper .footer-block .button__footer--outlined {
+  background-color: transparent;
+  color: white;
+  border-color: #fff;
+}
+#footer-wrapper .footer-block .button__footer--outlined:last-of-type {
+  margin-top: 20px;
 }
 #footer-wrapper .back-to-top {
   display: block;
@@ -12571,7 +12480,7 @@ body {
   margin-left: 60px;
 }
 .not-found__content p {
-  color: #263A54;
+  color: #53524d;
   text-transform: uppercase;
 }
 .not-found__subtitle {
@@ -12591,7 +12500,7 @@ body {
   display: block;
   width: 100%;
   padding: 4px 0px;
-  border: 1px solid #263A54;
+  border: 1px solid #53524d;
   font-family: "WalsheimThin", sans-serif;
   font-size: 13.6px;
   line-height: 20px;
@@ -12600,29 +12509,17 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  background-color: #263A54;
+  background-color: #53524d;
   transition: all 0.4s ease-in-out;
 }
 .not-found__back-to-home:hover {
   background-color: transparent;
-  color: #263A54;
+  color: #53524d;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
   color: #fff;
-}
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-family: "navarrowsfont", sans-serif;
-}
-
-.swiper-button-prev::after {
-  content: "\e900";
-}
-
-.swiper-button-next::after {
-  content: "\e901";
 }
 
 .swiper-container-block-slider {
@@ -12633,7 +12530,7 @@ body {
 .swiper-container-wide-slider {
   height: 630px;
   padding-bottom: 30px;
-  background-color: #263A54;
+  background-color: #53524d;
   position: relative;
   overflow: hidden;
 }
@@ -12658,7 +12555,7 @@ body {
   margin: 0 3px;
 }
 .swiper-container-wide-slider .swiper-pagination-bullets .swiper-pagination-bullet-active {
-  background-color: #263A54;
+  background-color: #53524d;
   border: 1px solid #fff;
 }
 
@@ -12666,7 +12563,7 @@ body {
   display: block;
   width: 100%;
   padding: 4px 0px;
-  border: 1px solid #263A54;
+  border: 1px solid #53524d;
   font-family: "WalsheimThin", sans-serif;
   font-size: 13.6px;
   line-height: 20px;
@@ -12674,11 +12571,11 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #263A54;
+  color: #53524d;
   transition: all 0.4s ease-in-out;
 }
 .block-image__btn--wrapper > a:first-child:hover {
-  background-color: #263A54;
+  background-color: #53524d;
   color: #fff;
 }
 
@@ -12735,26 +12632,26 @@ body {
 }
 .button__blue {
   color: #ffffff;
-  background-color: #263A54;
-  border: 1px solid #263A54;
+  background-color: #53524d;
+  border: 1px solid #53524d;
 }
 .button__blue:hover {
   background-color: #fff;
-  color: #263A54;
+  color: #53524d;
 }
 .button__white {
-  color: #263A54;
+  color: #53524d;
   background-color: #ffffff;
-  border: 1px solid #263A54;
+  border: 1px solid #53524d;
 }
 .button__white:hover {
-  background-color: #263A54;
+  background-color: #53524d;
   color: #fff;
 }
 .button__booking {
   padding: 5px 30px;
   line-height: 23px;
-  border: 1px solid #263A54;
+  border: 1px solid #53524d;
   font-size: 12px;
   display: block;
   text-decoration: none;
@@ -12820,7 +12717,7 @@ body {
   display: block;
   width: 100%;
   padding: 4px 0px;
-  border: 1px solid #263A54;
+  border: 1px solid #53524d;
   font-family: "WalsheimThin", sans-serif;
   font-size: 13.6px;
   line-height: 20px;
@@ -12828,30 +12725,31 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #263A54;
+  color: #53524d;
   transition: all 0.4s ease-in-out;
 }
 .main-block__btn:hover {
-  background-color: #263A54;
+  background-color: #53524d;
   color: #fff;
 }
 .main-block__btn--dark {
-  background-color: #263A54;
+  background-color: #53524d;
   color: #fff;
   margin-left: 30px;
 }
 .main-block__btn--dark:hover {
   background-color: #fff;
-  color: #263A54;
+  color: #53524d;
 }
 .main-block__title {
   font-family: "TheMixBoldItalic", sans-serif;
   font-size: 22px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 27px;
-  letter-spacing: 2px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #000;
+  text-rendering: optimizeLegibility;
+  color: #53524d;
   -webkit-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
@@ -12866,7 +12764,7 @@ body {
   letter-spacing: 0.05em;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #263A54;
+  color: #53524d;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
@@ -12889,13 +12787,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .main-block__informations {
-  background-color: #263A54;
+  background-color: #53524d;
 }
 .main-block--inverted {
-  background-color: #263A54;
+  background-color: #53524d;
 }
 .main-block--inverted .main-block__content {
-  background-color: #263A54;
+  background-color: #53524d;
 }
 .main-block--inverted .main-block__title {
   color: #fff;
@@ -12970,7 +12868,7 @@ body {
   letter-spacing: 0.05em;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #263A54;
+  color: #53524d;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
@@ -13018,7 +12916,7 @@ body {
   display: block;
   width: 100%;
   padding: 4px 0px;
-  border: 1px solid #263A54;
+  border: 1px solid #53524d;
   font-family: "WalsheimThin", sans-serif;
   font-size: 13.6px;
   line-height: 20px;
@@ -13026,28 +12924,28 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #263A54;
+  color: #53524d;
   transition: all 0.4s ease-in-out;
 }
 .block-image__btn:hover {
-  background-color: #263A54;
+  background-color: #53524d;
   color: #fff;
 }
 .block-image__btn--dark {
-  background-color: #263A54;
+  background-color: #53524d;
   color: #fff;
   margin-left: 30px;
 }
 .block-image__btn--dark:hover {
   background-color: #fff;
-  color: #263A54;
+  color: #53524d;
 }
 .block-image__btn--wrapper {
   display: flex;
   justify-content: space-between;
 }
 .block-image--slider {
-  background-color: #263A54;
+  background-color: #53524d;
 }
 .block-image--slider img {
   height: 100%;
@@ -13066,7 +12964,7 @@ body {
   letter-spacing: 0.05em;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #263A54;
+  color: #53524d;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
@@ -13129,7 +13027,7 @@ body {
   line-height: 19.5px;
 }
 .block-image--wide .block-image__content a {
-  color: #263A54;
+  color: #53524d;
 }
 
 .block-timeline {
@@ -13182,7 +13080,7 @@ body {
   display: block;
   width: 100%;
   padding: 4px 0px;
-  border: 1px solid #263A54;
+  border: 1px solid #53524d;
   font-family: "WalsheimThin", sans-serif;
   font-size: 13.6px;
   line-height: 20px;
@@ -13190,11 +13088,11 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #263A54;
+  color: #53524d;
   transition: all 0.4s ease-in-out;
 }
 .block__btn:hover {
-  background-color: #263A54;
+  background-color: #53524d;
   color: #fff;
 }
 .block__badge {
@@ -13220,7 +13118,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .block--inverted {
-  background-color: #263A54;
+  background-color: #53524d;
 }
 .block--inverted .block__title {
   color: #fff;
@@ -13234,7 +13132,7 @@ body {
 }
 .block--inverted .block__btn:hover {
   background-color: #fff;
-  color: #263A54;
+  color: #53524d;
 }
 
 @media (max-width: 992px) {
@@ -13301,12 +13199,12 @@ body {
 }
 .block-sidebar__title {
   font-family: "TheMixBoldItalic", sans-serif;
-  font-size: 22px;
-  font-weight: normal;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 27px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #000;
+  color: #53524d;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
@@ -13335,7 +13233,7 @@ body {
   display: block;
   width: 100%;
   padding: 4px 0px;
-  border: 1px solid #263A54;
+  border: 1px solid #53524d;
   font-family: "WalsheimThin", sans-serif;
   font-size: 13.6px;
   line-height: 20px;
@@ -13343,37 +13241,44 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #263A54;
+  color: #53524d;
   transition: all 0.4s ease-in-out;
 }
 .block-sidebar__btn:hover {
-  background-color: #263A54;
+  background-color: #53524d;
   color: #fff;
 }
 .block-sidebar__badge {
-  border-radius: 50%;
-  width: 78px;
-  height: 78px;
-  background-color: #e7315b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  right: 4px;
-  top: -27px;
+  right: -50px;
+  top: -50px;
   z-index: 3;
-  padding: 21px 6px;
-  text-align: center;
-  vertical-align: middle;
+  width: 130px;
+  height: 130px;
+  -webkit-transform: rotate(20deg);
+  border-radius: 50%;
   font-family: "WalsheimThin", sans-serif;
   font-size: 12px;
-  line-height: 17px;
-  letter-spacing: 0.075em;
-  color: #FFF;
   font-weight: 400;
-  text-transform: uppercase;
-  transform: rotate(20deg);
   -webkit-font-smoothing: antialiased;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  line-height: 18px;
+  letter-spacing: 0.075em;
+  vertical-align: middle;
+  color: #FFF;
+  background-color: #e7315b;
 }
 .block-sidebar--inverted {
-  background-color: #263A54;
+  background-color: #53524d;
 }
 .block-sidebar--inverted .block-sidebar__title {
   color: #fff;
@@ -13390,7 +13295,7 @@ body {
 }
 .block-sidebar--inverted .block-sidebar__btn:hover {
   background-color: #fff;
-  color: #263A54;
+  color: #53524d;
 }
 .block-sidebar--technical-equipment {
   display: flex;
@@ -13400,7 +13305,7 @@ body {
 .block-sidebar--technical-equipment span {
   display: block;
   font-weight: 600;
-  color: #263A54;
+  color: #53524d;
 }
 .block-sidebar--overviews .block-sidebar__btn:first-of-type {
   line-height: 16px;
@@ -13412,271 +13317,6 @@ body {
     padding: 22px;
   }
 }
-.percentagesCA-reviews ul {
-  list-style: none;
-}
-.percentagesCA-reviews ul li {
-  list-style: none;
-}
-.percentagesCA-reviews .percentagesCA-review {
-  list-style: none;
-  width: 100%;
-}
-
-.percentagesCA_box {
-  width: 100%;
-  min-width: 240px;
-  display: block;
-  min-height: 100px;
-  background: #fff;
-  font-size: 16px;
-  line-height: 1.2em;
-  font-family: "WalsheimThin", sans-serif;
-}
-.percentagesCA_box .adjective {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 10px 5px 5px 5px;
-  font-size: 18px;
-  font-weight: 700;
-  font-family: "WalsheimThin", sans-serif;
-  color: #343434;
-  border-left: 0px solid #dadada;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-}
-.percentagesCA_box .percentage {
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  font-size: 34px;
-  font-family: "WalsheimThin", sans-serif;
-  color: #343434;
-  border-left: 0px solid #dadada;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-}
-.percentagesCA_box .more {
-  width: 100%;
-  padding: 10px;
-  color: #263A54;
-  border-left: 0px solid #dadada;
-  text-align: center;
-}
-.percentagesCA_box .more a {
-  font-size: 14px;
-  font-family: "WalsheimThin", sans-serif;
-  text-decoration: none;
-  line-height: 1.2em;
-  -webkit-font-smoothing: antialiased;
-  color: #263A54;
-}
-.percentagesCA_box .more2 {
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  line-height: 1.2em;
-  font-family: Helvetica, Arial, Verdana, sans-serif;
-  color: #343434;
-  border-left: 0px solid #dadada;
-  text-align: center;
-}
-.percentagesCA_box .more2 img {
-  width: 25px;
-}
-
-.dv-left {
-  display: inline-block;
-  text-align: center;
-  width: 50%;
-  float: left;
-}
-
-.dv-right {
-  width: 40%;
-  float: right;
-  box-sizing: border-box;
-}
-
-.dv-title {
-  width: 100%;
-  height: 100%;
-  padding: 6px 30px;
-  font-size: 14px;
-  line-height: 1.4em;
-  border: 0;
-  border-radius: 0;
-  font-family: "WalsheimThin", sans-serif;
-  color: #FFFFFF;
-  background-color: #203b54;
-  -webkit-font-smoothing: antialiased;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: normal;
-  text-align: center;
-}
-
-.percentages__block {
-  padding: 0;
-}
-.percentages__text {
-  padding: 30px;
-}
-
-.sb {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-.sb__guests-rooms {
-  width: 30% !important;
-}
-.sb__footer {
-  display: none;
-}
-.sb__property {
-  display: none !important;
-}
-.sb__form {
-  display: block;
-  float: left;
-  width: 100%;
-  background-color: #ffffff;
-  max-height: 40px;
-}
-.sb__form-field {
-  display: flex !important;
-  align-items: baseline;
-}
-.sb__form-field-input {
-  max-height: 35px;
-  padding: 6px 20px !important;
-  border-radius: 0px !important;
-  width: 50% !important;
-  float: left;
-}
-.sb__form-field-date-number {
-  font-size: 12px !important;
-  line-height: 24px !important;
-  font-weight: bolder !important;
-}
-.sb__form-field-month-year {
-  font-size: 12px !important;
-  line-height: 24px !important;
-  font-weight: bolder !important;
-}
-.sb__form-field-guests {
-  font-size: 12px !important;
-  line-height: 24px !important;
-  font-weight: bolder !important;
-}
-.sb__form-field-weekday {
-  display: none !important;
-}
-.sb__form-field-rooms {
-  display: none !important;
-}
-.sb__form-field-icon {
-  display: none;
-}
-.sb__form-field-label {
-  padding: 7px 0px;
-  width: auto;
-  margin-right: 30px;
-  float: left;
-  text-transform: uppercase;
-}
-
-#sb-container-bar-de .sb__dates {
-  width: 50%;
-}
-#sb-container-bar-de .sb__guests-rooms {
-  width: 25% !important;
-  margin-top: 0;
-}
-#sb-container-bar-de .sb__btn--verify {
-  width: 25% !important;
-  margin-top: 0;
-}
-#sb-container-bar-de .sb__footer {
-  display: block;
-}
-#sb-container-bar-de .sb-custom-link-color {
-  font-size: 14px;
-}
-#sb-container-bar-de .sb-custom-field-bg-color {
-  border: 1px solid !important;
-}
-
-#sb-container-bar-de .sb__btn--verify {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px !important;
-  line-height: 23px;
-  width: 20% !important;
-  height: 35px !important;
-  padding: 5px 30px !important;
-  letter-spacing: 1.4px;
-  border-radius: 0;
-}
-
-#sb-container .sb-screen-l .sb__btn--verify {
-  float: right !important;
-  margin-top: 0px !important;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px !important;
-  line-height: 23px;
-  width: 20% !important;
-  height: 35px !important;
-  padding: 5px 30px !important;
-  letter-spacing: 1.4px;
-  border-radius: 0;
-}
-
-#sb-container-en .sb-screen-l .sb__btn--verify {
-  float: right !important;
-  margin-top: 0px !important;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px !important;
-  line-height: 23px;
-  width: 20% !important;
-  height: 35px !important;
-  padding: 5px 30px !important;
-  letter-spacing: 1.4px;
-  border-radius: 0;
-}
-
-#sb-container-fr .sb-screen-l .sb__btn--verify {
-  float: right !important;
-  margin-top: 0px !important;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px !important;
-  line-height: 23px;
-  width: 20% !important;
-  height: 35px !important;
-  padding: 5px 30px !important;
-  letter-spacing: 1.4px;
-  border-radius: 0;
-}
-
-.booking-bar__container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 0 60px;
-  background-color: #fff;
-}
-
-.buchen__title {
-  font-family: "WalsheimThin";
-  font-size: 24px;
-  margin-bottom: 30px;
-}
-
 .footer-block__title {
   display: block;
   text-align: center;

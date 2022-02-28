@@ -21,10 +21,15 @@ get_header(); ?>
 							// Loop through rows.
 							while ( have_rows( 'blocks' ) ) :
 								the_row();
-								$block_image = get_sub_field( 'image' );
-								$block_link  = get_sub_field( 'button_link' );
+								$block_image              = get_sub_field( 'image' );
+								$block_link               = get_sub_field( 'button_link' );
+								$block_slug               = get_sub_field( 'slug' );
+								$block_link_in_new_window = '';
+								if ( get_sub_field( 'in_a_new_window' ) ) :
+									$block_link_in_new_window = 'target="_blank"';
+								endif;
 								?>
-								<div class="col-12 col-sm-12 col-md-12 col-lg-6 px-15">
+								<div id="<?php echo str_replace(' ', '-', strtolower($block_slug)); ?>" class="col-12 col-sm-12 col-md-12 col-lg-6 px-15">
 									<div class="main-block">
 										<?php if ( $block_link ) : ?>
 											<a href="<?php echo esc_url( $block_link ); ?>">
@@ -38,7 +43,7 @@ get_header(); ?>
 											<p class="main-block__text"><?php the_sub_field( 'description' ); ?></p>
 											<div class="main-block__btn--wrapper">
 												<?php if ( $block_link ) : ?>
-													<a href="<?php echo esc_url( $block_link ); ?>" class="main-block__btn"><?php the_sub_field( 'button_title' ); ?></a>
+													<a href="<?php echo esc_url( $block_link ); ?>" class="main-block__btn" <?php echo $block_link_in_new_window; ?>><?php the_sub_field( 'button_title' ); ?></a>
 												<?php endif; ?>
 											</div>
 										</div>

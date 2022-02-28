@@ -1,90 +1,60 @@
 /*homepage*/
 .slider-banner-wrapper
   background-color: #ffffff
-  padding: 0px 60px
+  padding-top: 60px
 
 .slider-banner-container
-  max-height: 100vh
-  min-height: 100vh
+  max-height: 650px
+  min-height: 650px
 
 .slider-banner
-  max-height: 100vh
-  min-height: 100vh
+  max-height: 650px
+  min-height: 650px
+  display: flex
+  justify-content: center
+  align-content: center
   img
     width: 100%
     height: 100%
     object-fit: cover
     position: absolute
+    z-index: 1
   &__badge
     position: absolute
-    top: 120px
-    left: 30px
+    top: 50px
+    left: 50px
     display: block
     z-index: 3
+    max-width: 160px
+    max-height: 160px
+    img
+      width: 100%
   &__content
-    position: absolute
-    bottom: 0
-    left: 0
+    position: relative
     width: 100%
     display: flex
-    align-items: center
+    align-items: flex-end
     justify-content: space-between
-    background-color: #fff
     padding: 30px 0px
+    margin-bottom: 70px
+    z-index: 2
   &__inner-content
     display: flex
     align-items: center
   &__title
     font-family: $title-font
     font-weight: 400
-    font-size: 40px
-    letter-spacing: 2px
+    font-size: 58px
+    letter-spacing: 0px
     white-space: nowrap
-    line-height: 40px
-    text-transform: uppercase
+    line-height: 72px
     margin: 0px
-    margin-right: 200px
-
-  &__info
-    font-family: $primary-font
-    font-weight: 400
-    font-size: 13px
-    text-transform: uppercase
-    line-height: 20px
-    letter-spacing: 1px
-    margin: 0px
-    white-space: nowrap
-    margin-right: 100px
-    span
-      display: block
-  &__description
-    font-family: $primary-font
-    font-weight: 400
-    font-size: 13px
-    line-height: 20px
-    letter-spacing: 1px
-    margin: 0px
-    white-space: nowrap
-  &__btn
-    display: block
-    font-family: $primary-font
-    font-size: 13px
-    font-weight: 400
-    text-decoration: none
-    text-transform: uppercase
-    text-align: center
-    letter-spacing: 1px
-    line-height: 20px
-    border: 1px solid #000
-    color: #000
-    padding: 5px 35px
+    color: #fff
+    -webkit-font-smoothing: antialiased
+    white-space: normal
 
 @media (max-width: $xxl)
-  .slider-banner
-    &__title
-      margin-right: 80px
-    &__info
-      margin-right: 80px
+
 
 @media (max-width: $md)
   .slider-banner-wrapper

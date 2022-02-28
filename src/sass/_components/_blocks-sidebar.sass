@@ -8,12 +8,12 @@
   position: relative
   &__title
     font-family: $title-font
-    font-size: 22px
-    font-weight: normal
+    font-size: 20px
+    font-weight: 400
     line-height: 27px
     letter-spacing: 0.06em
     text-transform: uppercase
-    color: #000
+    color: $primary-color
     hyphens: auto
     -webkit-font-smoothing: antialiased
     margin-bottom: 10px
@@ -49,26 +49,38 @@
       background-color: $primary-color
       color: #fff
   &__badge
-    border-radius: 50%
-    width: 78px
-    height: 78px
-    background-color: #e7315b
+    display: flex
+    justify-content: center
+    align-items: center
     position: absolute
-    right: 4px
-    top: -27px
+    right: -50px
+    top: -50px
     z-index: 3
-    padding: 21px 6px
-    text-align: center
-    vertical-align: middle
+
+    width: 130px
+    height: 130px
+
+    -webkit-transform: rotate(20deg)
+
+    border-radius: 50%
+
     font-family: $primary-font
     font-size: 12px
-    line-height: 17px
-    letter-spacing: 0.075em
-    color: #FFF
     font-weight: 400
-    text-transform: uppercase
-    transform: rotate(20deg)
     -webkit-font-smoothing: antialiased
+    text-align: center
+    text-transform: uppercase
+    text-rendering: optimizeLegibility
+    -webkit-backface-visibility: hidden
+    hyphens: auto
+    
+    line-height: 18px
+    letter-spacing: .075em
+    vertical-align: middle
+
+    color: #FFF
+    background-color: #e7315b
+
   &--inverted
     background-color: $primary-color
     .block-sidebar__title

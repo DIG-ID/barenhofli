@@ -7,9 +7,9 @@ $wp_customize->add_section(
 		'priority'       => 80,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => __( 'Socials', 'kreuz-bern' ),
-		'description'    => __( 'Edit here the links for Kreuz Bern socials', 'kreuz-bern' ),
-		'panel'          => 'kreuz_theme_panel',
+		'title'          => __( 'Socials', 'barenhofli' ),
+		'description'    => __( 'Edit here the links for Kreuz Bern socials', 'barenhofli' ),
+		'panel'          => 'barenhofli_theme_panel',
 	)
 );
 
@@ -29,7 +29,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'facebook_url',
 		array(
-			'label'   => __( 'Facebook', 'kreuz-bern' ),
+			'label'   => __( 'Facebook', 'barenhofli' ),
 			'type'    => 'url',
 			'section' => 'social_section',
 		)
@@ -52,7 +52,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'twitter_url',
 		array(
-			'label'   => __( 'Twitter', 'kreuz-bern' ),
+			'label'   => __( 'Twitter', 'barenhofli' ),
 			'type'    => 'url',
 			'section' => 'social_section',
 		)
@@ -75,7 +75,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'linkedin_url',
 		array(
-			'label'   => __( 'LinkedIn', 'kreuz-bern' ),
+			'label'   => __( 'LinkedIn', 'barenhofli' ),
 			'type'    => 'url',
 			'section' => 'social_section',
 		)
@@ -98,7 +98,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'instagram_url',
 		array(
-			'label'   => __( 'Instagram', 'kreuz-bern' ),
+			'label'   => __( 'Instagram', 'barenhofli' ),
 			'type'    => 'url',
 			'section' => 'social_section',
 		)
@@ -121,7 +121,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'youtube_url',
 		array(
-			'label'   => __( 'Youtube', 'kreuz-bern' ),
+			'label'   => __( 'Youtube', 'barenhofli' ),
 			'type'    => 'url',
 			'section' => 'social_section',
 		)

@@ -60,7 +60,7 @@
 						);
 						?>
 						<?php do_action( 'wpml_add_language_selector' ); ?>
-						<a target="_blank" href="http://kongress.kreuzbern.ch/default.aspx" data-redirect-url="http://kongress.kreuzbern.ch/default.aspx" data-default-url="#collapse1" class="button button__blue button__booking button__desktop d-none d-md-none d-lg-none d-xl-block" data-hover="dropdown"><?php esc_html_e( 'RESERVATION', 'barenhofli' ); ?></a>
+						<a target="_blank" href="https://foratable.com/reserve/restaurant/b3baad689ed07019b5f32363a339e2ca#/table" data-default-url="#collapse1" class="button button__blue button__booking button__desktop d-none d-md-none d-lg-none d-xl-block" data-hover="dropdown"><?php esc_html_e( 'Reserve a Table', 'barenhofli' ); ?></a>
 						<?php get_template_part( 'template-parts/menu-mobile' ); ?>
 
 				</nav><!-- .site-navigation -->
