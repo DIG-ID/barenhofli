@@ -4,23 +4,30 @@
     text-align: center
     text-transform: uppercase
     margin-bottom: 10px
+  &:last-of-type
+    p
+      &:first-of-type
+        margin-bottom: 5px
+    
+    
 
 .socials-wrapper
-  display: flex
-  justify-content: center
+  margin-bottom: 10px
   .social-link
     transtion: all .3s ease-in-out
     margin: 0px 10px
     border-bottom: 1px solid transparent
+    display: inline-block
     svg
       //width: 20px
       padding: 2px
-      height: 20px
+      height: 25px
       fill: #9a9a9a
       transtion: all .3s ease-in-out
     &:first-child
       margin-left: 0
     &:last-child
+      margin-left: 0
       margin-right: 0
     &:hover
       border-bottom: 1px solid #fff

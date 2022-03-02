@@ -23,4 +23,20 @@ $(function() {
     }
   }); 
 
+  $('.menu-item > a[href^="#"]').on( 'click', function (event) {
+    event.preventDefault();
+    $(".menu-item > a").removeClass("active");
+    $(this).addClass("active");
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top + -100
+  }, 300);
+  });
+
+  $('.scrollToTop').on( 'click', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 300);
+  });
+
 });

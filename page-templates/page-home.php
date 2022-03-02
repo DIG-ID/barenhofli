@@ -15,10 +15,7 @@ get_header(); ?>
 				<?php do_action( 'before_main_content' ); ?>
 					<div class="row">
 						<?php
-						// Check rows exists.
 						if ( have_rows( 'blocks' ) ) :
-
-							// Loop through rows.
 							while ( have_rows( 'blocks' ) ) :
 								the_row();
 								$block_image              = get_sub_field( 'image' );
@@ -29,7 +26,7 @@ get_header(); ?>
 									$block_link_in_new_window = 'target="_blank"';
 								endif;
 								?>
-								<div id="<?php echo str_replace(' ', '-', strtolower($block_slug)); ?>" class="col-12 col-sm-12 col-md-12 col-lg-6 px-15">
+								<div <?php if ( $block_slug ) : echo ' id="' . str_replace(' ', '-', strtolower( $block_slug ) ) . '"'; endif; ?> class="col-12 col-sm-12 col-md-12 col-lg-6 px-15">
 									<div class="main-block">
 										<?php if ( $block_link ) : ?>
 											<a href="<?php echo esc_url( $block_link ); ?>">
@@ -51,12 +48,8 @@ get_header(); ?>
 								</div>
 								<?php
 							endwhile;
-
-						else :
-						// Do something...
 						endif;
 						?>
-
 					</div><!-- .row -->
 				<?php do_action( 'after_main_content' ); ?>
 				<?php do_action( 'before_main_sidebar' ); ?>

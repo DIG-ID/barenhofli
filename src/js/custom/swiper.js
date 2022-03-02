@@ -9,6 +9,7 @@ $(function() {
     direction: 'horizontal',
     slidesPerView: 1,
     speed: 1000,
+    loop: true,
     centeredSlides: true,
     navigation: {
       nextEl: '.swiper-button-next',
