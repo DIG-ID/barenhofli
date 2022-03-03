@@ -29,6 +29,11 @@ $(function() {
       $('#opener__menu').toggleClass('open');
       $('#opener__menu').toggleClass('closed');
       $("#opener__menu").css("display", "none");
+      $(".icon-bar").css({'transition' : 'all .2s linear','width' : '22px','border-radius' : '0px'});
+      $(".icon-bar:nth-child(1)").css({'transform' : 'unset','transition' : 'all .2s linear'});
+      $(".icon-bar:nth-child(2)").css({'transition' : 'all .05s linear','height' : '2px'});
+      $(".icon-bar:nth-child(3)").css('transform', 'unset');
+      $("#opener").css('padding-top','11px');
     }
     $(".menu-item > a").removeClass("active");
     $(this).addClass("active");

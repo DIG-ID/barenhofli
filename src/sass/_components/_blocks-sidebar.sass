@@ -87,6 +87,7 @@
 
   &--inverted
     background-color: $primary-color
+    z-index: 2
     .block-sidebar__title
       color: #fff
     .block-sidebar__text
@@ -129,4 +130,9 @@
         display: none
       &:nth-child(6)
         display: none
-      
+
+@media (max-width: $sm)
+  .block-sidebar
+    &__badge
+      right: -30px
+      top: -30px
