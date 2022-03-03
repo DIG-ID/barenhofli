@@ -29,7 +29,7 @@
 		</div>
 		<div class="row">
 			<div class="col-12 col-sm-12 col-md-12 col-lg-12 button__booking--wrapper">
-				<a href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=3565&lang=en" target="_blank" class="main-block__btn main-block__btn--dark button__menumob"><?php esc_html_e( 'RESERVATION', 'barenhofli' ); ?></a>
+				<a href="https://foratable.com/reserve/restaurant/b3baad689ed07019b5f32363a339e2ca#/table" target="_blank" class="main-block__btn main-block__btn--dark button__menumob"><?php esc_html_e( 'RESERVE A TABLE', 'barenhofli' ); ?></a>
 			</div>
 		</div>
 	</div>

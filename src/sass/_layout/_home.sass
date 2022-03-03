@@ -54,20 +54,33 @@
     white-space: normal
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3)
 
-@media (max-width: $xxl)
+.page-template-page-home
+  #main
+    padding-top: 60px
 
+@media (max-width: $lg)
+  .slider-banner
+    &__title
+      font-size: 31px
+      line-height: 35px
+    &__badge
+      top: 80px
+      left: 30px
+      max-width: 100px
+      max-height: 100px
+  .page-template-page-home
+    #main
+      padding-top: 50px
 
 @media (max-width: $md)
-  .slider-banner-wrapper
-    padding: 0px 30px
   .slider-banner-container
-    max-height: 70vh
-    min-height: 70vh
+    max-height: 90vh
+    min-height: 90vh
   .slider-banner
-    max-height: 70vh
-    min-height: 70vh
+    max-height: 90vh
+    min-height: 90vh
     img
-      height: 70vh
+      height: 90vh
 
 @media (max-width: $sm)
   .slider-banner-wrapper
@@ -78,6 +91,3 @@
       top: 120px
       left: 20px
 
-.page-template-page-home
-  #main
-    padding-top: 60px

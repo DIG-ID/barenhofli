@@ -30,6 +30,7 @@
       width: 100%
       max-width: 165px
       transition: all .3s ease-in-out
+      text-transform: uppercase
       &:hover
         outline: 0
         text-decoration: none
@@ -78,9 +79,18 @@
 
 @media (max-width: $lg)
   #footer-wrapper
-    padding: 30px 15px 23px 15px
+    padding: 50px 15px 23px 15px
     .footer-block
       margin-bottom: 20px
-      text-align: center
-      &:first-child
+      &:first-of-type
+        margin-bottom: 8px
+      &:nth-child(2)
         display: none
+      &:nth-child(3)
+        p
+          &:first-of-type
+            display: none
+      img
+        width: 165px
+      .button__footer
+        max-width: 100%

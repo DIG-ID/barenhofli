@@ -8,7 +8,7 @@
  */
 function barenhofli_before_main_content() {
 	?>
-	<div id="main-content" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9 px-15">
+	<div id="main-content" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9 px-15 order-2 order-xl-1">
 		<section id="main-content__wrapper">
 	<?php
 }
@@ -32,7 +32,7 @@ add_action( 'after_main_content', 'barenhofli_after_main_content' );
  */
 function barenhofli_before_main_sidebar() {
 	?>
-	<aside id="main-sidebar" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 px-15">
+	<aside id="main-sidebar" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 px-15 order-1 order-xl-2">
 		<div class="row">
 	<?php
 }

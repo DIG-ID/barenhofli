@@ -26,7 +26,7 @@ get_header(); ?>
 									$block_link_in_new_window = 'target="_blank"';
 								endif;
 								?>
-								<div <?php if ( $block_slug ) : echo ' id="' . str_replace(' ', '-', strtolower( $block_slug ) ) . '"'; endif; ?> class="col-12 col-sm-12 col-md-12 col-lg-6 px-15">
+								<div <?php if ( $block_slug ) : echo ' id="' . str_replace(' ', '-', strtolower( $block_slug ) ) . '"'; endif; ?> class="col-12 col-sm-12 col-md-12 col-lg-6 px-15 order-2 order-xl-1">
 									<div class="main-block">
 										<?php if ( $block_link ) : ?>
 											<a href="<?php echo esc_url( $block_link ); ?>">

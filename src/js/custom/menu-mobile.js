@@ -25,6 +25,11 @@ $(function() {
 
   $('.menu-item > a[href^="#"]').on( 'click', function (event) {
     event.preventDefault();
+    if ( $('#opener__menu').hasClass('open') ) {
+      $('#opener__menu').toggleClass('open');
+      $('#opener__menu').toggleClass('closed');
+      $("#opener__menu").css("display", "none");
+    }
     $(".menu-item > a").removeClass("active");
     $(this).addClass("active");
     $('html, body').animate({
