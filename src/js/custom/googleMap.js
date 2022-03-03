@@ -195,7 +195,7 @@
       position : latLng,
       map: map,
       icon: {
-        url: "http://localhost/barenhofli/wp-content/uploads/map_marker.png",
+        url: "https://baerenhoeflidev.yournewwebsite.ch/wp-content/uploads/map_marker.png",
       }
     });
   
