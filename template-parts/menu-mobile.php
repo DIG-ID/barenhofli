@@ -21,10 +21,10 @@
 	<div class="menu__container--mobile">
 		<div class="row">
 			<div class="col-6 col-sm-6 col-md-6 col-lg-6 button__tel--wrapper">
-				<a href="tel:0041313299595" class="main-block__btn button__menumob"><?php esc_html_e( 'Telephone', 'barenhofli' ); ?></a>
+				<a href="tel://0041313299494" class="main-block__btn button__menumob"><?php esc_html_e( 'Telephone', 'barenhofli' ); ?></a>
 			</div>
 			<div class="col-6 col-sm-6 col-md-6 col-lg-6 button__email--wrapper">
-				<a href="mailto:info@kreuzbern.ch" class="main-block__btn button__menumob"><?php esc_html_e( 'Send E-mail', 'barenhofli' ); ?></a>
+				<a href="mailto:info@hotelmetropole.ch" class="main-block__btn button__menumob"><?php esc_html_e( 'Send E-mail', 'barenhofli' ); ?></a>
 			</div>
 		</div>
 		<div class="row">

@@ -78,3 +78,6 @@ require get_template_directory() . '/inc/theme-template-tags.php';
 
 // Theme customizer options.
 require get_template_directory() . '/inc/customizer.php';
+
+// Theme custom admin settings.
+require get_template_directory() . '/inc/theme-admin-settings.php';

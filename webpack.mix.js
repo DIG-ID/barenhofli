@@ -10,6 +10,7 @@ mix
   })
   .js('src/js/main.js', 'dist')
   .sass('src/sass/main.sass', 'dist')
+  .sass('src/sass/admin-login.sass', 'dist')
 
   .disableNotifications()
   .browserSync({
