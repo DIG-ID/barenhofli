@@ -17,7 +17,7 @@ if ( $sidebar_blocks ) :
 				<?php if ( get_field( 'block_display_badge', $sidebar_block->ID ) ) : ?>
 					<span class="block-sidebar__badge"><?php the_field( 'block_badge_content', $sidebar_block->ID ); ?></span>
 				<?php endif; ?>
-				<h3 class="block-sidebar__title"><?php echo esc_html( $block_title ); ?></h3>
+				<h3 class="block-sidebar__title"><?php echo wp_kses_post( $block_title ); ?></h3>
 				<p class="block-sidebar__text"><?php the_field( 'block_description', $sidebar_block->ID ); ?></p>
 				<?php
 				if ( have_rows( 'block_buttons', $sidebar_block->ID ) ) :
