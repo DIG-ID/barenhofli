@@ -138,20 +138,7 @@
     var mapArgs = {
       zoom        : $el.data('zoom') || 16,
       styles: styles,
-      mapTypeId   : google.maps.MapTypeId.ROADMAP,
-      zoomControlOptions: {
-        position: google.maps.ControlPosition.LEFT_TOP,
-      },
-      streetViewControlOptions: {
-        position: google.maps.ControlPosition.LEFT_TOP,
-      },
-      fullscreenControl: false,
-      //mapTypeControl: false,
-      mapTypeControlOptions: {
-        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-        position: google.maps.ControlPosition.TOP_RIGHT,
-        mapTypeIds: ["roadmap", "terrain"],
-      },
+      mapTypeId   : google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map( $el[0], mapArgs );
 
@@ -195,7 +182,7 @@
       position : latLng,
       map: map,
       icon: {
-        url: "https://baerenhoeflidev.yournewwebsite.ch/wp-content/uploads/map_marker.png",
+        url: "https://baerenhoefli.ch/wp-content/uploads/map_marker.png",
       }
     });
   
