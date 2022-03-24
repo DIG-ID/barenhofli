@@ -235,9 +235,24 @@
     }
   }
   
+  function removeGoogleMapFont() {
+    var head = document.getElementsByTagName('head')[0];
+    // Save the original method
+    var insertBefore = head.insertBefore;
+    // Replace it!
+    head.insertBefore = function (newElement, referenceElement) {
+      if (newElement.href && newElement.href.indexOf('//fonts.googleapis.com/css?family=Roboto') > -1 || newElement.href && newElement.href.indexOf('//fonts.googleapis.com/css?family=Google+Sans+Text') > -1  ) {
+        //console.info('Prevented Roboto and Google Sans Text from loading!');
+        return;
+      }
+      insertBefore.call(head, newElement, referenceElement);
+    };
+  }
+
   // Render maps on page load.
   $(document).on( 'ready', function(){
     $('.acf-map').each(function(){
+      removeGoogleMapFont();
       var map = initMap( $(this) );
     });
   });

@@ -42,6 +42,7 @@ function theme_enqueue_styles() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/main.js', array( 'jquery' ), $theme_version, true);
 	wp_enqueue_script( 'google-map-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0', true );
+	wp_enqueue_script( 'google-map-settings', get_stylesheet_directory_uri() . '/dist/google-maps.js', array( 'jquery' ), $theme_version, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
@@ -50,13 +51,13 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function register_custom_language_widget() {
 	register_sidebar(
 		array(
-		'id'            => 'lang-switcher-mobile',
-		'name'          => esc_html__( 'Language Switcher Mobile Widget' ),
-		'description'   => esc_html__( 'Widget area for language selector mobile' ),
-		'before_widget' => '<div id="%1$s" class="col-sm-12 col-md-2 widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '',
-		'after_title'   => '',
+			'id'            => 'lang-switcher-mobile',
+			'name'          => esc_html__( 'Language Switcher Mobile Widget' ),
+			'description'   => esc_html__( 'Widget area for language selector mobile' ),
+			'before_widget' => '<div id="%1$s" class="col-sm-12 col-md-2 widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '',
+			'after_title'   => '',
 		)
 	);
 }
