@@ -21,14 +21,27 @@
     z-index: 1
   &__badge
     position: absolute
-    top: 50px
+    top: 40px
     left: 50px
     display: block
     z-index: 3
-    max-width: 160px
-    max-height: 160px
+    display: block
     img
-      width: 100%
+      width: 100px
+      max-width: 100%
+      height: auto
+      object-fit: cover
+  &__badge2
+    position: absolute
+    top: 150px
+    left: 50px
+    display: block
+    z-index: 3
+    img
+      width: 100px
+      max-width: 100%
+      height: auto
+      object-fit: cover
   &__content
     position: relative
     width: 100%
@@ -64,10 +77,15 @@
       font-size: 31px
       line-height: 35px
     &__badge
-      top: 80px
-      left: 30px
-      max-width: 100px
-      max-height: 100px
+      top: 40px
+      left: 20px
+      img
+        width: 90px
+    &__badge2
+      top: 130px
+      left: 20px
+      img
+        width: 90px
   .page-template-page-home
     #main
       padding-top: 50px

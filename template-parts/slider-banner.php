@@ -31,6 +31,10 @@
 		if ( $slider_banner_badge ) :
 			echo '<a class="slider-banner__badge" href="' . get_field( 'award_link' ) . '" target="_blank">' . wp_get_attachment_image( $slider_banner_badge, 'full' ) . '</a>';
 		endif;
+		$slider_banner_badge2 = get_field( 'badge_2' );
+		if ( $slider_banner_badge2 ) :
+			echo '<div class="slider-banner__badge2">' . wp_get_attachment_image( $slider_banner_badge2, 'full' ) . '</div>';
+		endif;
 		?>
 	</div>
 </section>
