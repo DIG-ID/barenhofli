@@ -26,6 +26,7 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<?php do_action( 'wp_body_open' ); ?>
+	<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to main content', 'barenhofli' ); ?></a>
 	<div class="site" id="page">
 
 		<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">

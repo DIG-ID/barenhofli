@@ -1,0 +1,25 @@
+.skip-link
+  @apply sr-only
+  font-family: $primary-font
+  font-size: 13.6px
+  letter-spacing: .1em
+  font-weight: 400
+  text-transform: uppercase
+  text-decoration: none
+  -webkit-font-smoothing: antialiased
+  transition: all .4s ease-in-out
+
+  &:focus
+    @apply not-sr-only
+    position: fixed
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 9999
+    background-color: $primary-color
+    color: #ffffff
+    border: 1px solid $primary-color
+    padding: 5px 30px
+    line-height: 23px
+    outline: 2px solid $bg-color
+    outline-offset: 2px
