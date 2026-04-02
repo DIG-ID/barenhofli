@@ -1,5 +1,9 @@
 .skip-link
-  @apply sr-only
+  position: absolute
+  left: -9999px
+  width: 1px
+  height: 1px
+  overflow: hidden
   font-family: $primary-font
   font-size: 13.6px
   letter-spacing: .1em
@@ -7,14 +11,16 @@
   text-transform: uppercase
   text-decoration: none
   -webkit-font-smoothing: antialiased
-  transition: all .4s ease-in-out
+  transition: top .4s ease-in-out, left .4s ease-in-out
 
   &:focus
-    @apply not-sr-only
     position: fixed
     top: 0
     left: 50%
     transform: translateX(-50%)
+    width: auto
+    height: auto
+    overflow: visible
     z-index: 9999
     background-color: $primary-color
     color: #ffffff
