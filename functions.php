@@ -35,14 +35,21 @@ add_action( 'after_setup_theme', 'barenhofli_theme_setup' );
 // Enqueue styles and scripts
 function theme_enqueue_styles() {
 
-	// Get the theme data
 	$the_theme     = wp_get_theme();
 	$theme_version = $the_theme->get( 'Version' );
+
 	wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/dist/main.css', array(), $theme_version );
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/main.js', array( 'jquery' ), $theme_version, true );
-	wp_enqueue_script( 'google-map-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBAZN5TfX1aWmjodZ4e_6sOcaJV4D59jfo&callback=initMap', array(), $theme_version, true );
-	wp_enqueue_script( 'google-map-settings', get_stylesheet_directory_uri() . '/dist/google-maps.js', array( 'jquery' ), $theme_version, true );
+
+	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/main.js', array( 'jquery' ), $theme_version, array(
+		'in_footer' => true,
+		'strategy'  => 'defer',
+	) );
+
+	// Only load Google Maps scripts on pages that have a map field set
+	if ( get_field( 'google_map' ) ) {
+		wp_enqueue_script( 'google-map-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBAZN5TfX1aWmjodZ4e_6sOcaJV4D59jfo', array(), null, true );
+		wp_enqueue_script( 'google-maps-settings', get_stylesheet_directory_uri() . '/dist/google-maps.js', array( 'jquery', 'google-map-api' ), $theme_version, true );
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
@@ -64,6 +71,14 @@ function register_custom_language_widget() {
 
 add_action( 'widgets_init', 'register_custom_language_widget' );
 
+// Prevent lazy-loading the header logo — it's always above the fold.
+add_filter( 'wp_get_attachment_image_attributes', function( $attr ) {
+	if ( isset( $attr['class'] ) && strpos( $attr['class'], 'custom-logo' ) !== false ) {
+		$attr['loading'] = 'eager';
+	}
+	return $attr;
+} );
+
 // Google maps
 function my_acf_init() {
 	acf_update_setting( 'google_api_key', 'AIzaSyBAZN5TfX1aWmjodZ4e_6sOcaJV4D59jfo' );
@@ -71,8 +86,8 @@ function my_acf_init() {
 add_action( 'acf/init', 'my_acf_init' );
 
 
-// Theme otimizations.
-//require get_template_directory() . '/inc/theme-optimizations.php';
+// Theme optimizations: disable emojis, embeds, RSS feeds, query strings.
+require get_template_directory() . '/inc/theme-optimizations.php';
 
 // Theme custom template tags.
 require get_template_directory() . '/inc/theme-template-tags.php';

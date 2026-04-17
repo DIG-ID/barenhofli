@@ -12,29 +12,13 @@ function kongresszentrum_disable_self_pingbacks( &$links ) {
 add_action( 'pre_ping', 'kongresszentrum_disable_self_pingbacks' );
 
 /**
- * Remove Query Strings
- */
-function remove_query_strings() {
-	if ( ! is_admin() ) {
-			add_filter( 'script_loader_src', 'remove_query_strings_split', 15 );
-			add_filter( 'style_loader_src', 'remove_query_strings_split', 15 );
-	}
-}
-
-function remove_query_strings_split( $src ) {
-	$output = preg_split("/(&ver|\?ver)/", $src);
-	return $output[0];
-}
-add_action( 'init', 'remove_query_strings' );
-
-/**
  * Disable embeds
  */
 function my_deregister_scripts() {
-	wp_dequeue_script( 'wp-embed' );
+	wp_deregister_script( 'wp-embed' );
 }
 
-add_action( 'wp_footer', 'my_deregister_scripts' );
+add_action( 'wp_enqueue_scripts', 'my_deregister_scripts', 100 );
 
 
 /**

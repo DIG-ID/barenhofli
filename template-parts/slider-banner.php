@@ -2,13 +2,18 @@
 	<div class="swiper slider-banner-container">
 		<div class="swiper-wrapper">
 			<?php
+			$slide_index = 0;
 			if ( have_rows( 'slider' ) ) :
 				while ( have_rows( 'slider' ) ) :
 					the_row();
 					$slider_image = get_sub_field( 'image' );
+					$img_attrs    = $slide_index === 0
+						? array( 'loading' => 'eager', 'fetchpriority' => 'high' )
+						: array();
+					$slide_index++;
 					?>
 					<div class="slider-banner swiper-slide">
-						<?php echo wp_get_attachment_image( $slider_image, 'full' ); ?>
+						<?php echo wp_get_attachment_image( $slider_image, 'banner-slider', false, $img_attrs ); ?>
 						<div class="slider-banner__content">
 							<div class="container">
 								<div class="row justifiy-content-center">
@@ -29,11 +34,11 @@
 		<?php
 		$slider_banner_badge = get_field( 'award_badge' );
 		if ( $slider_banner_badge ) :
-			echo '<a class="slider-banner__badge" href="' . get_field( 'award_link' ) . '" target="_blank">' . wp_get_attachment_image( $slider_banner_badge, 'full' ) . '</a>';
+			echo '<a class="slider-banner__badge" href="' . esc_url( get_field( 'award_link' ) ) . '" target="_blank">' . wp_get_attachment_image( $slider_banner_badge, 'thumbnail' ) . '</a>';
 		endif;
 		$slider_banner_badge2 = get_field( 'another_badge' );
 		if ( $slider_banner_badge2 ) :
-			echo '<div class="slider-banner__badge2">' . wp_get_attachment_image( $slider_banner_badge2, 'full' ) . '</div>';
+			echo '<div class="slider-banner__badge2">' . wp_get_attachment_image( $slider_banner_badge2, 'thumbnail' ) . '</div>';
 		endif;
 		?>
 	</div>

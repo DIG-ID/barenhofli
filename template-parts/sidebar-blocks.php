@@ -12,8 +12,8 @@ if ( $sidebar_blocks ) :
 			$block_template = 'block-sidebar block-sidebar--inverted';
 		endif;
 		?>
-		<div id="<?php echo str_replace(' ', '-', strtolower( $block_title ) ); ?>" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-12 px-15">
-			<div class="<?php echo $block_template; ?>">
+		<div id="<?php echo esc_attr( str_replace( ' ', '-', strtolower( $block_title ) ) ); ?>" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-12 px-15">
+			<div class="<?php echo esc_attr( $block_template ); ?>">
 				<?php if ( get_field( 'block_display_badge', $sidebar_block->ID ) ) : ?>
 					<span class="block-sidebar__badge"><?php the_field( 'block_badge_content', $sidebar_block->ID ); ?></span>
 				<?php endif; ?>
