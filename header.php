@@ -9,9 +9,6 @@
 
 		<link rel="preconnect" href="https://www.googletagmanager.com">
 
-		<link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/fonts/themix_b7_bold_italic-webfont.woff" as="font" type="font/woff" crossorigin>
-		<link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/fonts/GT-Walsheim-Thin.woff" as="font" type="font/woff" crossorigin>
-
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
