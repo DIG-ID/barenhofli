@@ -47,6 +47,10 @@ function theme_enqueue_styles() {
 
 	// Only load Google Maps scripts on pages that have a map field set
 	if ( get_field( 'google_map' ) ) {
+		add_action( 'wp_head', function() {
+			echo '<link rel="preconnect" href="https://maps.googleapis.com" crossorigin>' . "\n";
+			echo '<link rel="preconnect" href="https://maps.gstatic.com" crossorigin>' . "\n";
+		}, 1 );
 		wp_enqueue_script( 'google-map-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBAZN5TfX1aWmjodZ4e_6sOcaJV4D59jfo', array(), null, true );
 		wp_enqueue_script( 'google-maps-settings', get_stylesheet_directory_uri() . '/dist/google-maps.js', array( 'jquery', 'google-map-api' ), $theme_version, true );
 	}
@@ -70,6 +74,12 @@ function register_custom_language_widget() {
 }
 
 add_action( 'widgets_init', 'register_custom_language_widget' );
+
+// Exclude slider images from WP Rocket's lazy load — first slide is LCP.
+add_filter( 'rocket_lazyload_excluded_attributes', function( $attributes ) {
+	$attributes[] = 'attachment-banner-slider';
+	return $attributes;
+} );
 
 // Prevent lazy-loading the header logo — it's always above the fold.
 add_filter( 'wp_get_attachment_image_attributes', function( $attr ) {
