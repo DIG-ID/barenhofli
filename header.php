@@ -5,8 +5,11 @@
 	<head>
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-		<link rel="profile" href="https://gmpg.org/xfn/11">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		<link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
+		<link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
 
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -29,7 +32,7 @@
 	<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to main content', 'barenhofli' ); ?></a>
 	<div class="site" id="page">
 
-		<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+		<div id="wrapper-navbar" itemscope itemtype="https://schema.org/WebSite">
 
 				<nav class="navbar navbar-expand-xl navbar-dark bg-primary">
 
